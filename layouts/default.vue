@@ -12,5 +12,6 @@ export default {
   components: {
     MyHeader,
   },
+  middleware: 'auth',
 }
 </script>
