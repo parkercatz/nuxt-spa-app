@@ -9,15 +9,17 @@
 
 <script>
 export default {
-  data() {
-    return { isLogin: true }
+  computed: {
+    isLogin() {
+      return this.$store.state.isLogin
+    },
   },
   methods: {
     login: function() {
-      this.isLogin = true
+      this.$store.commit('login')
     },
     logout: function() {
-      this.isLogin = false
+      this.$store.commit('logout')
     },
   },
 }
